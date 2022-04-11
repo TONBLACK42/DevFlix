@@ -1,0 +1,32 @@
+/*Quando a tela diminuir a 700 pixels de largura colocar os botões abaixo do logo.*/
+@media screen and (max-width:700px) {
+    header .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botao{
+        margin-top: 5px;
+        width: 300px;
+    }
+
+    .artigo{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+/*Quando a tele aumentar a 1000 pixels de larguta restringir a descrição do
+titulo a 50%. */
+@media screen and (min-width: 1000px) {
+    .descricao{
+        width: 50%;
+    }
+
+    .artigo p
+    {
+        width: 70%;
+    }
+
+}

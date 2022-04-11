@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!--É como se fosse o celebro do site. -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Descrição que a parece a baixo do link em buscadores-->
+    <meta name="description" content="Se você é programador precisa estar aqui!">
+    <!--Meu CSS-->
+    <link rel="stylesheet" href="css/main.css">
+    <!--CSS para tratar responsividade-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!--Owl CSS (JQuery)-->
+    <link rel="stylesheet" href="css/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
+    <title>DEVFLIX</title>
+</head>
+
+<!--Corpo do site-->
+<body>
+    <!--Cabeçalho: Aqui deve ficar a barra de menu (NavBar)-->
+    <header>
+        <div class="container">
+            <h2 class="logo">DEVFLIX</h2>
+            <!--Nav faz referencia a navegação.Tag semantica para criar menus de navegação -->
+            <nav>
+                <a href="#">Inicio</a>
+                <a href="#">Séries</a>
+                <a href="#">Filmes</a>
+                <a href="#">Documentários</a>
+            </nav>
+        </div>
+    </header>
+
+    <!--É uma DIV em essencia, porem a semantica faz diferença para 
+        ferramentas de SEO. Ela diz que esse é o "Miolo" o  conteúdo 
+        principal do site.-->
+    <main>
+        <div class="filme-principal">
+            <!--O Container é uma classe wrapper facilita a flexbilização 
+            dos elementos e assim a responsividade-->
+            <div class="container">
+                <h3 class="titulo">PIRATAS DA INFORMÁTICA</h3>
+                <p class="descricao">
+                    Mostra como Bill Gates e Steve Jobs fundaram as respectivas 
+                    Microsoft e Apple e a concorrência entre os dois para ver 
+                    quem chegava primeiro e as estratégias que utilizaram para criarem suas empresas.
+                </p>
+                
+                <!--Essa Div não "herdou" o css de container porque toda div
+                por padrão vem com display block-->
+                <div class="botoes">
+                    <!--A propriedade role é importante para definir a "função" do
+                    elemento quando acessado por oss e dispositivos diferentes-->
+                    <button id="btnAssistir" role="button" class="botao">
+                        <i class="fa-solid fa-play"></i>
+                        ASSISTIR AGORA
+                    </button>
+                    <button id="btnMaisInformacoes" role="button" class="botao">
+                        <i class="fa-solid fa-circle-info"></i>
+                        MAIS INFORMAÇÕES
+                    </button>
+                </div>
+
+            </div>
+        </div>        
+    </main>    
+
+    <div class="carrosel-filmes">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+               <img onclick="filmesCarrosel('Hackers','min9.jpg')" class="box-filme" src="img/mini9.jpg" alt="" srcset=""> 
+            </div>
+            <div class="item">
+                <img onclick="filmesCarrosel('Jobs','mini12.jpg')" class="box-filme" src="img/mini12.jpg" alt="" srcset=""> 
+             </div>
+             <div class="item">
+                <img onclick="filmesCarrosel('Algorithm','mini10.jpg')" class="box-filme" src="img/mini10.jpg" alt="" srcset=""> 
+             </div>
+             <div class="item">
+                <img onclick="filmesCarrosel('Jogos de Guerra','mini13.jpg')" class="box-filme" src="img/mini13.jpg" alt="" srcset=""> 
+             </div>
+             <div class="item">
+                <img onclick="filmesCarrosel('Matrix','mini17.jpg')" class="box-filme" src="img/mini17.jpg" alt="" srcset=""> 
+             </div>
+             <div class="item">
+                <img onclick="filmesCarrosel('Antitrust','mini20.jpg')" class="box-filme" src="img/mini20.jpg" alt="" srcset=""> 
+             </div>
+             <div class="item">
+                <img onclick="filmesCarrosel('O Jogo da Imitação','mini23.jpg')" class="box-filme" src="img/mini23.jpg" alt="" srcset=""> 
+             </div>
+             <div class="item">
+                <img onclick="filmesCarrosel('Swordfish','mini21.jpg')" class="box-filme" src="img/mini21.jpg" alt="" srcset=""> 
+             </div>
+             <div class="item">
+                <img onclick="filmesCarrosel('Steve Jobs','mini11.jpg')" class="box-filme" src="img/mini11.jpg" alt="" srcset=""> 
+             </div>
+             <div class="item">
+                <img onclick="filmesCarrosel('A Rede','mini14.jpg')" class="box-filme" src="img/mini14.jpg" alt="" srcset=""> 
+             </div>
+             <div class="item">
+                <img onclick="filmesCarrosel('Código para o Inferno','mini16.jpg')" class="box-filme" src="img/mini16.jpg" alt="" srcset=""> 
+             </div>
+             <div class="item">
+                <img onclick="filmesCarrosel('Code Rush','mini19.jpg')" class="box-filme" src="img/mini19.jpg" alt="" srcset=""> 
+             </div>
+             <div class="item">
+                <img onclick="filmesCarrosel('Triumph of the Nerds','min15.jpg')" class="box-filme" src="img/mini15.jpg" alt="" srcset=""> 
+             </div>
+             <div class="item">
+                <img onclick="filmesCarrosel('Os Estagiários','mini22.jpg')" class="box-filme" src="img/mini22.jpg" alt="" srcset=""> 
+             </div>
+             <div class="item">
+                <img onclick="filmesCarrosel('The Robot','mini24.jpg')" class="box-filme" src="img/mini24.jpg" alt="" srcset=""> 
+             </div>
+             <div class="item">
+                <img onclick="filmesCarrosel('A Rede Social','mini25.jpg')" class="box-filme" src="img/mini25.jpg" alt="" srcset=""> 
+             </div>
+             <div class="item">
+                <img onclick="filmesCarrosel('Piratas da Informática','mini18.jpg')" class="box-filme" src="img/mini18.jpg" alt="" srcset=""> 
+             </div>
+        </div>
+    </div>
+
+    <!--SCRIPT JS: Devem ficar no final da página pois a página carrega em 
+    sequência de cima para baixo e se por um acaso o JS carregar antes do 
+    HTML pode dar erro.-->
+    
+    <!--Incorporando JS externo(Link para os Icones do site Awesome)-->
+    <script src="https://kit.fontawesome.com/6a768b4b2d.js" crossorigin="anonymous"></script>
+    <!--Owl JS (JQuery)-->
+    <script src="js/owl/jquery.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/setup.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

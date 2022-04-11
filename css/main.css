@@ -1,0 +1,253 @@
+/*Declaração de variáveis: Podemos declarar variaveis para guardar valores
+**que serão usados mais de uma vez. Como as cores princípais do site.
+*/
+:root{
+    --vermelha: #E50914;
+    --preta: #141414;
+}
+
+/*Reset: Garante que as margens não serão diferentes para cada navegador.
+**Também garante que os elementos não estrapolem os limites das "box".*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/***************************ELEMENTOS BASE*********************************/
+/*Funciona para todo o site. No elemento você pode passar diversas propriedades.*/
+body{
+    background: var(--preta);
+    font-family: 'Arial', Times, serif;
+    color:white;
+}
+
+/*Abrange a caixa de navegação e logo. Usa display:flex uma forma de alinhar
+**elementos em tela.*/
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center; /*alinhamento vertical*/
+    justify-content: space-between; /*alinhamento horizontal*/
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelha);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+} 
+
+/*Aqui trata de cor de texto, espaçamento e outras propriedades esteticas d
+**dos links do menu de navegação.*/
+header nav a{
+    text-decoration: none;
+    color: #aaa;
+    margin-right: 10px;
+}
+
+/*Evento de navegação hover para que a cor do link seja alterada ao passarmos
+**o mouse em cima.*/
+header nav a:hover{
+    color: #fff;
+}
+
+/***************************FILME PRINCIPAL********************************/
+
+.filme-principal{
+    
+    /*linear-gradient cria uma camada no caso sobre a imagem causando um
+    efeito de sombra.*/
+    background:linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50) 100%), url('/img/PiratasDaInformatica.jpg');
+    height: 400px;
+    background-size: cover;/*Faz com que a imagem não "estoure" a caixa.*/
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start; /*Alinha a esquerda.*/
+    font-size: 16px;
+} 
+
+.filme-principal .descricao{
+    margin-top: 2%;
+    margin-bottom: 40px;
+    
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer; /*UX dessa forma o usuário pode identificar que é um botão ao passar o mouse*/
+    transition: 3s ease all; /*Transição entre uma animação e outra.*/
+}
+
+/*Evento ao passar o mouse no botão inverter as cores de fundo e fonte*/
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+/*Aqui é usado o conceito de wrapper ou seja envelopar elementos para 
+manipula-los  em conjuto com maior facilidade.*/
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%; /*Limita o espaço para descrição do filme principal.*/
+}
+
+/***************************CARROSEL DE FILMES********************************/
+
+/*Configuração para o Carrosel de Filmes*/
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+/***************************PAGINA ASSISTIR********************************/
+
+.assistir-filme{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    font-size: 16px;
+
+    background:linear-gradient(rgba(0,0,0,.70),rgba(0,0,0,.70) 100%), url('/img/PiratasDaInformatica-assistir.jpg');
+    background-size: cover;
+    background-position: center;
+    justify-content:center;
+    align-items: center;
+}
+
+.frame-video{
+    background-color: var(--vermelha);
+}
+
+
+.informacao-filme .descricao{
+    margin-top: 2%;
+    margin-bottom: 40px;
+    
+}
+
+.informacao-filme .titulo{
+    margin-top: 5%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/***************************PAGINA MAIS INFORMAÇÕES*************************/
+.artigo{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 40px;
+    margin-left: 5px;
+}
+
+.imagem-info{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.artigo p{
+    font-size: 16px;
+    text-align: justify;
+    text-indent: 2em;
+    line-height: 20px;
+
+    margin: 5px;
+    width: 95%;
+}
+
+.descricao-imagem::first-letter{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.referencia p{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: #aaa;
+    margin-right: 10px;
+    font-weight: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
